@@ -18,8 +18,9 @@ Clone the repository with the following command to get started with working with
 
 The examples pertaining to a given algorithm can be found in the different directories:
 
- BDT - decision trees using SciKitLearn
- NN  - Neural Networks using TensorFlow
+  BDT - decision trees using SciKitLearn
+
+  NN  - Neural Networks using TensorFlow
 
 Software Requirements:
 
