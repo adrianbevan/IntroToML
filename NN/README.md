@@ -1,5 +1,5 @@
-# ATLAS-UK-ML / NN
-ATLAS UK Machine Learning Tutorial - TensorFlow and Neural Networks
+# GRADnet-ML / NN
+GRADnet-ML Machine Learning Tutorial - TensorFlow and Neural Networks
 -------------------------------------------------------------------------------------------------
 This folder contains the TensorFlow-based notebooks that leads from linear regression examples
 to build and explore neural networks (NN). The following notebooks exist
@@ -28,11 +28,6 @@ to a sensible minimum, sometimes the model will fail to converge completely and 
 will diverge from a physically meaningful result.  This becomes more apparent when attempting to 
 explore more complicated problems; progressing from the linear regression problem to the quadratic
 fitting problem.  
-
-Please see the following web page for this material, which includes downloadable tar balls and 
-slide deck pdf files:
-
-  https://pprc.qmul.ac.uk/~bevan/teaching/ATLAS-UK-ML.html
 
 -------------------------------------------------------------------------------------------------
 
