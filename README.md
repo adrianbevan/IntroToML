@@ -27,7 +27,11 @@ Software Requirements:
 The Python environment that these tutorials has been tested on is packaged in the Anaconda framework: https://www.anaconda.com
 
 Install Anaconda
-   Add the following packages: matplotlib scklearn tensorflow keras
+   Add the following packages:  
+   * matplotlib (`pip install matplotlib`)  
+   * scikit-learn (`pip install sklearn`)  
+   * tensorflow (`pip install tensorflow`)  
+   * keras (`pip install keras`)
 
 -------------------------------------------------------------------------------------------------
 Authors: Adrian Bevan (a.j.bevan@qmul.ac.uk)
