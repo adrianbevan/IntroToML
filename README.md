@@ -28,15 +28,10 @@ The Python environment that these tutorials has been tested on is packaged in th
 
 Install Anaconda and then obtain the following packages:  
     install with pip:  
-    scikit-plot (`pip install scikit-plot`)  
-    opencv (`pip install opencv-python`)  
-    keras (`pip install keras`)  
-    tensorflow (`pip install tensorflow`)  
-    install with conda:    
-    scikit-plot (`conda install -c conda-forge scikit-plot`)  
-    opencv (`conda install -c conda-forge opencv`)  
-    keras (`conda install -c conda-forge keras`)  
-    tensorflow (`conda install -c conda-forge tensorflow`)  
+    scikit-plot (`conda install -c conda-forge scikit-plot` OR `pip install scikit-plot`)  
+    opencv (`conda install -c conda-forge opencv` OR `pip install opencv-python`)  
+    keras (`conda install -c conda-forge keras` OR `pip install keras`)  
+    tensorflow (`conda install -c conda-forge tensorflow` OR `pip install tensorflow`)   
 
 If you run into any `ModuleNotFound` errors and cannot work out which packages you are missing please call over someone to help you.
 
