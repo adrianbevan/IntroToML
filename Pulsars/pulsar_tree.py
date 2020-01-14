@@ -35,20 +35,5 @@ y_pred=classifier.predict(X_test)
 #Let's see how accurate our model is likely to be 
 print('Accuracy = {}'.format(metrics.accuracy_score(y_test, y_pred)))
 
-#Visualizing the tree
-#Allows us to write strings to or from a file
-dot_data=StringIO()
-
-
-#Below we are exporting a tree in the DOT format
-export_graphviz(classifier, out_file=dot_data, filled=True,
-                rounded=True, 
-                special_characters=True, 
-                feature_names=features, 
-                class_names=['0','1'])
-
-graph=pydotplus.graph_from_dot_data(dot_data.getvalue())
-graph.write_pdf('pulsar_tree.pdf')
-
 plot_learning_curve(classifier, X_test, y_test)
 plt.show()
