@@ -5,9 +5,9 @@ from sklearn import metrics #Import scikit-learn metrics module for accuracy cal
 #Vizualization
 from sklearn.tree import export_graphviz
 from sklearn.externals.six import StringIO
-from IPython.display import Image
+#from IPython.display import Image
 import pydotplus
-import cv2 as cv
+#import cv2 as cv
 import matplotlib.pyplot as plt
 from scikitplot.estimators import plot_learning_curve
 
