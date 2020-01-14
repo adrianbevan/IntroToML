@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 import cv2
 
-df=pd.read_csv('~/Documents/ML/pulsars/pulsar_stars.csv')
+df=pd.read_csv('pulsar_stars.csv')
 
 #Setting x and y and normalize the data
 x_data=df.drop(columns='target_class')

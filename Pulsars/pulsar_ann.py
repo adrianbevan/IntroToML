@@ -7,7 +7,7 @@ from keras import Sequential
 from keras.layers import Dense
 from sklearn.metrics import confusion_matrix
 from scikitplot.estimators import plot_learning_curve
-df=pd.read_csv('~/Documents/ML/pulsars/pulsar_stars.csv')
+df=pd.read_csv('pulsar_stars.csv')
 
 x_data=df.drop(columns='target_class')
 X=StandardScaler().fit_transform(x_data)
