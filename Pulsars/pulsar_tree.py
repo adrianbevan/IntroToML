@@ -11,7 +11,7 @@ import cv2 as cv
 import matplotlib.pyplot as plt
 from scikitplot.estimators import plot_learning_curve
 
-data=pd.read_csv('~/Documents/ML/pulsars/pulsar_stars.csv')
+data=pd.read_csv('pulsar_stars.csv')
 
 #We first decide on how to split the data into features and labels
 #features:

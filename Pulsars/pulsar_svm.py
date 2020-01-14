@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from scikitplot.estimators import plot_learning_curve
 import matplotlib.pyplot as plt
 
-df=pd.read_csv('~/Documents/ML/pulsars/pulsar_stars.csv')
+df=pd.read_csv('pulsar_stars.csv')
 x_data=df.drop(columns='target_class')
 X=StandardScaler().fit_transform(x_data)
 y=df.target_class.values
