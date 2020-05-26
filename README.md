@@ -8,9 +8,8 @@ different algorithms including:
   Neural Networks
 
 Please see the following web page for meetings that have used this repository:
-  
-   http://www.sepnet.ac.uk/sepnet-graduate-network/training-events-201920/machine-learning-and-ai-workshop-15-16-january-2020/
-   https://indico.stfc.ac.uk/event/175/
+  http://www.sepnet.ac.uk/sepnet-graduate-network/training-events-201920/machine-learning-and-ai-workshop-15-16-january-2020/
+  https://indico.stfc.ac.uk/event/175/
   
 -------------------------------------------------------------------------------------------------
 Getting Started:
