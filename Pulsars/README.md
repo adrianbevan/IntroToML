@@ -1,7 +1,17 @@
 # GRADnet-ML / Pulsars
-GRADnet-ML Machine Learning Tutorial
+Introduction to Machine Learning Tutorial
 -------------------------------------------------------------------------------------------------
-This folder contains something cool.
+This folder contains the following:
+
+ pulsar_logistic.py           Logistic Regression Model
+ pulsar_ann.py                Artificial Neural Network
+ pulsar_logistic_sklearn.py   Another Logistic Regression Model
+ pulsar_svm.py                Support Vector Machine example
+ pulsar_bdt.py                Boosted Decision Tree Example
+ pulsar_random_forest.py      Random Forest Example
+ pulsar_tree.py               Tree Example
+
+and the data file pulsar_stars.csv.
 
 Install Anaconda and then obtain the following packages:
 * scikit-plot (`conda install -c conda-forge scikit-plot` OR `pip install scikit-plot`)  
