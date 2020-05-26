@@ -43,3 +43,7 @@ Copyright (C) Queen Mary University of London
 This code is distributed under the terms and conditions of the GNU Public License
 
 -------------------------------------------------------------------------------------------------
+
+Version Updates
+- Version 1: Original Version commit: works with TensorFlow 1.4.
+- Version 2: Update code to use backward compatibility to TF1.0 for TF2.0.

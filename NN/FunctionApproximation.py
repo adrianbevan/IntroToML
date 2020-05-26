@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # TensorFlow: Function Approximation Example
+# # TensorFlow: Function Approximation Example
 # 
 # _This example was originally written for the Practical Machine Learning Summer School developed by Adrian Bevan (a.j.bevan@qmul.ac.uk) for Queen Mary University of London (C) 2018 and has been modified for the ATLAS UK Machine Learning Tutorial (Jan 2019)._
 # 
@@ -78,7 +78,7 @@ def myFunctionTF(arg):
     Note that random_normal is deprecated in more recent TF APIs. See the 
     website for information.
     """
-    return myFunctionTF_true(arg)+noise*tf.random_normal([Ngen, 1])
+    return myFunctionTF_true(arg)+noise*tf.random.normal([Ngen, 1])
 
 def myFunctionTF_true(arg):
     """
@@ -95,8 +95,8 @@ def myFunctionTF_true(arg):
 #  y: is the tensor for the output value of the function that is being approximated by 
 #     the MLP.
 #
-x = tf.placeholder(tf.float32, [None, n_input], name="x")
-y = tf.placeholder(tf.float32, [None, n_classes], name="y")
+x = tf.compat.v1.placeholder(tf.float32, [None, n_input], name="x")
+y = tf.compat.v1.placeholder(tf.float32, [None, n_classes], name="y")
 
 
 # We construct layer 1 from a weight set, a bias set and the activiation function used
@@ -111,8 +111,8 @@ y = tf.placeholder(tf.float32, [None, n_classes], name="y")
 #  layer_1:      the activation functions for layer 1
 #
 print("Creating a hidden layer with ", n_nodes, " nodes")
-w_layer_1    = tf.Variable(tf.random_normal([n_input, n_nodes]), name="weights_layer_1")
-bias_layer_1 = tf.Variable(tf.random_normal([n_nodes]), name="bias_layer_1")
+w_layer_1    = tf.Variable(tf.random.normal([n_input, n_nodes]), name="weights_layer_1")
+bias_layer_1 = tf.Variable(tf.random.normal([n_nodes]), name="bias_layer_1")
 layer_1      = tf.nn.relu(tf.add(tf.matmul(x,w_layer_1),bias_layer_1))
 
 
@@ -120,8 +120,8 @@ layer_1      = tf.nn.relu(tf.add(tf.matmul(x,w_layer_1),bias_layer_1))
 # combines the information down into a space of evidences for the possible
 # classes in the problem (n_classes=1 for this regression problem).
 print("Creating the output layer ", n_classes, " output values")
-output       = tf.Variable(tf.random_normal([n_nodes, n_classes]), name="weights_output")
-bias_output  = tf.Variable(tf.random_normal([n_classes]), name="bias_output")
+output       = tf.Variable(tf.random.normal([n_nodes, n_classes]), name="weights_output")
+bias_output  = tf.Variable(tf.random.normal([n_classes]), name="bias_output")
 output_layer = tf.matmul(layer_1, output) + bias_output
 
 #optimise with l2 loss function
@@ -131,23 +131,23 @@ loss = tf.nn.l2_loss(y - output_layer)
 # optimizer: take the Adam optimiser, see https://arxiv.org/pdf/1412.6980v8.pdf for
 # details of this algorithm.
 print("Using the Adam optimiser to train the network")
-optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss)
+optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss)
 
 # generate data, the input data is a random number betwen 1 and 10,
 # and the corresponding label value is the square root of that number
 print("Generating the test and training sets.  There are ", Ngen, " examples in each")
-tftraindata = tf.random_uniform([Ngen, 1], min_x, max_x)  # training set
-tftestdata  = tf.random_uniform([Ngen, 1], min_x, max_x)  # test set
+tftraindata = tf.random.uniform([Ngen, 1], min_x, max_x)  # training set
+tftestdata  = tf.random.uniform([Ngen, 1], min_x, max_x)  # test set
 
 
 # define operation for computing the regression output
 probabilities = output_layer
 
 # Initializing the variables
-init  = tf.global_variables_initializer()
+init  = tf.compat.v1.global_variables_initializer()
 
 # Start the session to embark on the training cycle
-sess = tf.Session()
+sess = tf.compat.v1.Session()
 sess.run(init)
 
 # convert the training data to np arrays so that these can be used with the feed_dict when training
@@ -236,7 +236,7 @@ plt.plot(input_value, prediction_value, 'r*')
 plt.ylabel('f(x) = x^2')
 plt.xlabel('x')
 plt.title('Network Response Function')
-
+plt.show()
 
 # In[16]:
 
@@ -245,13 +245,13 @@ print("The loss vs epoch is plotted below, where the blue is train data, and red
 # for log plots comment out the following
 plt.plot(epoch_set, loss_set, 'o', label='MLP Training phase')
 plt.plot(epoch_set, loss_test_value, 'rx', label='MLP Training phase')
-# For log plots uncomment the following
+# For log plots uncomment the following
 #plt.semilogy(epoch_set, loss_set, 'o', label='MLP Training phase')
 #plt.semilogy(epoch_set, loss_test_value, 'rx', label='MLP Training phase')
 plt.grid(True)
 plt.ylabel('loss')
 plt.xlabel('epoch')
-
+plt.show()
 
 # In[19]:
 
@@ -264,7 +264,7 @@ plt.semilogy(epoch_set, np.absolute(delta), 'o', label='MLP Training phase')
 plt.grid(True)
 plt.ylabel('$\Delta$ loss')
 plt.xlabel('epoch')
-
+plt.show()
 
 # Now that you have run through the FunctionApproximation notebook you may wish to adapt your network to use different activation functions, train for more epochs or adapt the notebook to approximate a different function.  These are just a few sugggestions to allow you to explore and adapt the code.  When you want to move on from this notebook you may wish to take a look at FunctionApproximation2, which uses two hidden layers for the network.
 

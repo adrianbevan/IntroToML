@@ -60,23 +60,23 @@ print("--------------------------------------------")
 #  yhat: is the tensor for the output value of the function that is being approximated by
 #     the the model, calculated from yhat = m*x + c
 #
-x = tf.placeholder(tf.float32, [None, 1], name="x")
-y = tf.placeholder(tf.float32, [None, 1], name="y")
+x = tf.compat.v1.placeholder(tf.float32, [None, 1], name="x")
+y = tf.compat.v1.placeholder(tf.float32, [None, 1], name="y")
 
 # parameters of the model are m (gradient) and c (constant offset)
 #   - pick random starting values for fit convergence
-c = tf.Variable(tf.random_uniform([1]), name="c")
-m = tf.Variable(tf.random_uniform([1]), name="m")
+c = tf.Variable(tf.random.uniform([1]), name="c")
+m = tf.Variable(tf.random.uniform([1]), name="m")
 yhat = m * x + c
 
 # Use the L2 norm loss function for minimsation. This is equivalent to minimising a chi2 
 # all of the data points have equal uncertainty, and hence the optimal solution for the
 # parameters is independent of the uncertainty.
-loss = tf.reduce_sum((y-yhat) * (y-yhat))
+loss = tf.reduce_sum(input_tensor=(y-yhat) * (y-yhat))
 
 # use a gradient descent optimiser to miniise the loss; here we specify the learning_rate step
 # size for the minimisation
-train_step = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
+train_step = tf.compat.v1.train.GradientDescentOptimizer(learning_rate).minimize(loss)
 
 
 # With the graph set up above, we now need to (i) prepare the training data, and (ii) start a TensorFlow session, and use this to initialise the variables m and c so that we can start the optimisation process.  
@@ -98,8 +98,8 @@ for i in range(Ngen):
 
 
 # prepare the session for evaluation and initialise the variables.
-sess = tf.Session()
-init = tf.global_variables_initializer()
+sess = tf.compat.v1.Session()
+init = tf.compat.v1.global_variables_initializer()
 sess.run(init)
 
 
