@@ -1,4 +1,4 @@
-# GRADnet-ML / NN
+# IntroToML / NN
 Introduction to Machine Learning Tutorial - TensorFlow and Neural Networks
 -------------------------------------------------------------------------------------------------
 This folder contains the TensorFlow-based notebooks that leads from linear regression examples
