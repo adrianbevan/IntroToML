@@ -1,15 +1,16 @@
 # GRADnet-ML
-GRADnet Machine Learning Tutorial repository: January 2020
+Inroduction to Machine Learning Tutorial repository
 ===========================================================
-This github repository contains code for the GRADnet Machine Learning Tutorial.  These examples allow you to explore
+This github repository contains code for the Introduction to Machine Learning Tutorial.  These examples allow you to explore
 different algorithms including:
   Decision Trees
   Random Forests
   Neural Networks
 
-Please see the following web page for the GRADnet ML meeting:
+Please see the following web page for meetings that have used this repository:
   
    http://www.sepnet.ac.uk/sepnet-graduate-network/training-events-201920/machine-learning-and-ai-workshop-15-16-january-2020/
+   https://indico.stfc.ac.uk/event/175/
   
 -------------------------------------------------------------------------------------------------
 Getting Started:
