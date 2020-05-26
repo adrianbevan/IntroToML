@@ -66,7 +66,8 @@ def update(iter_num, w, b, x_train, y_train, learning_rate):
 def plot_graph(index, cost_list):
     plt.plot(index, cost_list)
     plt.ylabel('Cost')
-    plt.savefig('~/Documents/ML/pulsars/learning_curves/logistic_regression.pdf')
+    print("creating the output file logistic_regression.pdf")
+    plt.savefig('logistic_regression.pdf')
     plt.show()
 
 #predict process
