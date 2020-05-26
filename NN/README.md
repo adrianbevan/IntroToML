@@ -1,5 +1,5 @@
 # GRADnet-ML / NN
-GRADnet-ML Machine Learning Tutorial - TensorFlow and Neural Networks
+Introduction to Machine Learning Tutorial - TensorFlow and Neural Networks
 -------------------------------------------------------------------------------------------------
 This folder contains the TensorFlow-based notebooks that leads from linear regression examples
 to build and explore neural networks (NN). The following notebooks exist
