@@ -1,4 +1,4 @@
-# GRADnet-ML
+# IntroToML
 Inroduction to Machine Learning Tutorial repository
 ===========================================================
 This github repository contains code for the Introduction to Machine Learning Tutorial.  These examples allow you to explore
@@ -15,7 +15,7 @@ Please see the following web page for meetings that have used this repository:
 -------------------------------------------------------------------------------------------------
 Getting Started:
 ----------------
-Clone the repository with the following command to get started with working with these examples. git clone --branch master https://github.com/adrianbevan/ATLAS-UK-ML.git
+Clone the repository with the following command to get started with working with these examples. git clone --branch master https://github.com/adrianbevan/IntroToML.git
 
 The examples pertaining to a given algorithm can be found in the different directories:
 
