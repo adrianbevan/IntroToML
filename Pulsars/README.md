@@ -1,4 +1,4 @@
-# GRADnet-ML / Pulsars
+# IntroToML / Pulsars
 Introduction to Machine Learning Tutorial
 -------------------------------------------------------------------------------------------------
 This folder contains the following:
