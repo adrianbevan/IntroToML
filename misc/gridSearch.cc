@@ -1,3 +1,8 @@
+//
+// Simple example to perform a 2D grid search to illustrate this method in the context
+// of fitting the function y = m*x+c to determine the optimal parameters for m and c.
+// An L2 loss function is used as the figure of merit for this optimisation example.
+//
 Double_t true_m = 1.0;
 Double_t true_c = 1.0;
 const Int_t N = 100;
